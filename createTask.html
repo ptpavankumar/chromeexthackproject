@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script type=""
     <style>
       body {
         margin: 0;
@@ -58,6 +59,9 @@
          vertical-align: middle;
        }
      }
+     .screen {
+       width: 100%
+     }
     </style>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -69,42 +73,7 @@
   <body id="popup">
     <div class='container'>
       <div class="row">
-        <div class="header">
-          <span> <   Create task</span>
-        </div>
-      </div>
-      <div class="row">
-        <div>Client:</div>
-      </div>
-      <div class="row">
-        <div class="col-md-12 data-box">
-          <div class="avatar">
-            <span class="name">JT</span>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="button-chip peoplechip l-flex-content">
-            <div class="avatar-name">
-              <span>JT</span>
-            </div>
-            <div class="paragraph tailing-padding l-line-compact l-content l-vertically-centered l-vertically-centered-vertical-contents ng-scope">
-              <div class="displayName title text-overflow l-pot ng-binding" tooltip-html-unsafe="Keira Knight<br>afcm.myob11@gmail.com" tooltip-popup-delay="1000" tooltip-append-to-body="true">
-                Keira Knight
-              </div>
-              <div class="subtitle title text-overflow l-pot">
-                Designer
-              </div>
-            </div>
-            <div class="peoplechip-actions l-horizontal-medium l-vertically-centered tailing-padding">
-              <button class="icon-edit clickable btn btn-link l-pot" tooltip="Edit" tooltip-popup-delay="1000" tooltip-append-to-body="true" type="button"></button>
-              <button class="icon-remove clickable btn btn-link l-pot ng-scope" ng-if="!hideCloseButton" ng-click="closeAction()" tooltip="Remove" tooltip-popup-delay="1000" tooltip-append-to-body="true" type="button"></button>
-            </div>
-            </div>
-        </div>
+        <img class="screen" src="screen.png"/>
       </div>
       <form class="form" role="form" action="">
         <div class="form-group">
@@ -121,7 +90,7 @@
         </div>
         <div class="panel-default">
   		    <div class="panel-body panel-buttons-right">
-  			   <button type="button" class="btn btn-primary pull-right">Create task</button>
+  			   <button type="button" class="btn btn-primary pull-right" onClick="">Create task</button>
   			   <button type="button" class="btn btn-default pull-right">Cancel</button>
   		    </div>
 	      </div>
