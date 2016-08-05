@@ -15,9 +15,12 @@
       "default_icon": "icon.png",
       "default_popup": "popup.html"
   },
+  "permissions": [
+    "contextMenus"
+  ],
+  "web_accessible_resources":["js/jquery-3.1.0.min.js"],
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "scripts": ["js/background.js", "js/window.js"]
   },
   "manifest_version": 2
 }
