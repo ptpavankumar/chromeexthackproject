@@ -25,9 +25,6 @@ $.ajax({
   }
 });
 
-$( "#partner" ).click(function() {
-  alert( "healthcheck called!" );
-});
 
 document.addEventListener('DOMContentLoaded', function () {
   // var divs = document.querySelectorAll('div');
@@ -39,7 +36,8 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   $( "#portalUrl" ).click(function() {
-    chrome.tabs.create({url: $("#portalUrl").href},function(tab) {
+    //console.log('url>>>>>>>', $("#portalUrl").href);
+    chrome.tabs.create({url: $("#portalUrl")[0].href},function(tab) {
       console.log('tab id', tab);
     });
   });
