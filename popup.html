@@ -14,21 +14,6 @@
             margin-top: 0px;
         }
 
-        div {
-            cursor: pointer;
-            text-align: center;
-            padding: 1px 3px;
-            font-family: sans-serif;
-            font-size: 0.8em;
-            width: 100px;
-            margin-top: 1px;
-            background: #cccccc;
-        }
-
-        div:hover {
-            background: #aaaaaa;
-        }
-
         #red {
             border: 1px solid red;
             color: red;
@@ -48,13 +33,57 @@
             border: 1px solid yellow;
             color: yellow;
         }
+
+        .Cashbooks-main-screen {
+          width: 175px;
+          height: 176.2px;
+          border-radius: 1rem;
+          background-color: #ffffff;
+        }
+        .cashbook-item {
+          cursor: pointer;
+          text-align: center;
+          padding: 10px 0 10px 0;
+          width: 100%;
+          margin-top: 1px;
+          background-color: #ffffff;
+          border-bottom: solid 1px #f5f5f5;
+          font-family: ArialMT;
+          font-size: 14px;
+          font-weight: 400;
+        }
+        .icon {
+          width: 20%;
+          padding-left: 1rem;
+          float: left;
+        }
+        .setting {
+          float: right;
+        }
+
     </style>
     <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="font-awesome.js"></script>
     <script src="popup.js"></script>
 </head>
 <body>
-<h1>Login to MYOB Portal</h1>
-<a id="portalUrl" href="https://qa4-practice.addevcloudservices.com.au/healthcheck">Login to portal!</a>
-<button id="partner">Alert me!</button>
+  <div class="Cashbooks-main-screen">
+    <div class="cashbook-item">
+      <span>Create task</span>
+    </div>
+    <div class="cashbook-item">
+      <span>Upload file</span>
+    </div>
+    <div class="cashbook-item">
+      <span>Take snapshot</span>
+    </div>
+    <div class="cashbook-item">
+      <span>Open Practice Online</span>
+    </div>
+    <div class="action-bar">
+        <img class="icon" src="icon.png"/>
+        <i class="setting fa fa-cog"></i>
+    </div>
+  </div>
 </body>
 </html>

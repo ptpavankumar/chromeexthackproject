@@ -18,7 +18,7 @@
   "permissions": [
     "contextMenus"
   ],
-  "web_accessible_resources":["js/jquery-3.1.0.min.js"],
+  "web_accessible_resources":["js/jquery-3.1.0.min.js", "font-awesome.js"],
   "background": {
     "scripts": ["js/background.js", "js/window.js"]
   },
