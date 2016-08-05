@@ -1,6 +1,6 @@
 {
-  "name": "A browser action with a popup that changes the page color",
-  "description": "Change the current page color",
+  "name": "AE Live plugin",
+  "description": "Its a plugin used to add additional functionality to AE/AO to support any accounting product(s).",
   "version": "1.0",
   "permissions": [
     "tabs", "http://*/*", "https://*/*"
@@ -11,14 +11,16 @@
     "16": "icon.png"
   },
   "browser_action": {
-      "default_title": "Set this page's color.",
+      "default_title": "Portal Menu",
       "default_icon": "icon.png",
       "default_popup": "popup.html"
   },
   "permissions": [
-    "contextMenus"
+    "contextMenus",
+    "https://partner.myob.com/uploads",
+    "activeTab"
   ],
-  "web_accessible_resources":["js/jquery-3.1.0.min.js", "font-awesome.js"],
+  "web_accessible_resources":["js/jquery-3.1.0.min.js"],
   "background": {
     "scripts": ["js/background.js", "js/window.js"]
   },
