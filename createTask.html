@@ -4,6 +4,7 @@
     <style>
       body {
         margin: 0;
+        width: 400px;
       }
      .data-box {
         width: 222px;
@@ -11,6 +12,8 @@
         border-radius: 4px;
         background-color: #fafafa;
         border: solid 1px #d2d2d2;
+        margin-left: 10px;
+        padding: 0 !important;
      }
      .row {
         margin-bottom: 10px;
@@ -28,10 +31,32 @@
      }
      .panel {
        border: 0px;
-       border-bottom: 1px solid transparent;
+       border-top: 1px solid transparent;
      }
-     .btn {
-       padding-left: 5px;
+     .panel-default {
+       .panel-buttons-right {
+         &.btn-primary {
+           margin-left: 10px;
+         }
+       }
+     }
+     .avatar {
+       width: 50px;
+       height: 50px;
+       border-radius: 50px;
+       margin: 5px;
+       text-align: center;
+       font-family: HelveticaNeue;
+       font-size: 14px;
+       font-weight: 300;
+       text-align: center;
+       color: #ffffff;
+       background-color: #a4007d;
+       display: table;
+       &.name {
+         display: table-cell;
+         vertical-align: middle;
+       }
      }
     </style>
     <meta charset="utf-8">
@@ -52,13 +77,34 @@
         <div>Client:</div>
       </div>
       <div class="row">
-        <div class="data-box">
-          here
+        <div class="col-md-12 data-box">
+          <div class="avatar">
+            <span class="name">JT</span>
+          </div>
         </div>
       </div>
       <div class="row">
       </div>
       <div class="row">
+        <div class="col-md-12">
+          <div class="button-chip peoplechip l-flex-content">
+            <div class="avatar-name">
+              <span>JT</span>
+            </div>
+            <div class="paragraph tailing-padding l-line-compact l-content l-vertically-centered l-vertically-centered-vertical-contents ng-scope">
+              <div class="displayName title text-overflow l-pot ng-binding" tooltip-html-unsafe="Keira Knight<br>afcm.myob11@gmail.com" tooltip-popup-delay="1000" tooltip-append-to-body="true">
+                Keira Knight
+              </div>
+              <div class="subtitle title text-overflow l-pot">
+                Designer
+              </div>
+            </div>
+            <div class="peoplechip-actions l-horizontal-medium l-vertically-centered tailing-padding">
+              <button class="icon-edit clickable btn btn-link l-pot" tooltip="Edit" tooltip-popup-delay="1000" tooltip-append-to-body="true" type="button"></button>
+              <button class="icon-remove clickable btn btn-link l-pot ng-scope" ng-if="!hideCloseButton" ng-click="closeAction()" tooltip="Remove" tooltip-popup-delay="1000" tooltip-append-to-body="true" type="button"></button>
+            </div>
+            </div>
+        </div>
       </div>
       <form class="form" role="form" action="">
         <div class="form-group">
@@ -69,12 +115,16 @@
           <label for="exampleInputLongTextField1">Description</label>
           <textarea class="form-control" rows="4"></textarea>
         </div>
-        <div class="panel panel-default">
-		    <div class="panel-body panel-buttons-right">
-			   <button type="button" class="btn btn-primary pull-right">Create task</button>
-			   <button type="button" class="btn btn-default pull-right">Cancel</button>
-		    </div>
-	    </div>
+        <div class="form-group">
+          <label for="exampleInputTextField2">Due Date</label>
+          <input type="text" class="form-control" id="exampleInputTextField2" placeholder="dd/mm/yyyy">
+        </div>
+        <div class="panel-default">
+  		    <div class="panel-body panel-buttons-right">
+  			   <button type="button" class="btn btn-primary pull-right">Create task</button>
+  			   <button type="button" class="btn btn-default pull-right">Cancel</button>
+  		    </div>
+	      </div>
       </form>
     </div>
   <script src="js/jquery.js"></script>
